@@ -1,0 +1,71 @@
+{
+    "name": "Странник",
+    "type": "friendly",
+    "description": "Странник — путешественник, который исследует мир в поисках древних артефактов и приключений. Обычно дружелюбен и готов поделиться историями.",
+    "dialogues": {
+        "start": {
+            "options": [
+                { "message": "Кто ты?", "nextStep": "introductionReply" },
+                { "message": "Откуда ты пришел?", "nextStep": "originReply" }
+            ]
+        },
+        "introductionReply": {
+            "responses": ["Я странник, путешествую по этим землям.", "Зовут меня Дарас, я иду в поисках приключений."],
+            "options": [
+                { "message": "Как долго ты здесь?", "nextStep": "howLongReply" },
+                { "message": "Чем занимаешься?", "nextStep": "occupationReply" }
+            ]
+        },
+        "originReply": {
+            "responses": ["Я пришел с далекого севера.", "Мои пути лежат через много земель."],
+            "options": [
+                { "message": "И что ты ищешь здесь?", "nextStep": "purposeReply" },
+                { "message": "Похоже, у тебя долгая дорога.", "nextStep": "end" }
+            ]
+        },
+        "howLongReply": {
+            "responses": ["Недавно пришел.", "Уже несколько дней здесь."],
+            "options": [
+                { "message": "Как тебе эти места?", "nextStep": "feedbackReply" },
+                { "message": "Тебе не скучно?", "nextStep": "end" }
+            ]
+        },
+        "occupationReply": {
+            "responses": ["Просто исследую мир.", "Иногда помогаю людям, которых встречаю."],
+            "options": [
+                { "message": "Нужна помощь?", "nextStep": "helpOfferReply" },
+                { "message": "Интересно.", "nextStep": "end" }
+            ]
+        },
+        "purposeReply": {
+            "responses": ["Я ищу древний артефакт.", "Моя цель — найти легендарный меч."],
+            "options": [
+                { "message": "Удачи в поисках!", "nextStep": "end" },
+                { "message": "А что ты сделаешь с ним?", "nextStep": "artifactReply" }
+            ]
+        },
+        "feedbackReply": {
+            "responses": ["Места тут тихие, но опасные.", "Природа красивая, но опасности подстерегают повсюду."],
+            "options": [
+                { "message": "Осторожнее.", "nextStep": "end" },
+                { "message": "Будь начеку.", "nextStep": "end" }
+            ]
+        },
+        "artifactReply": {
+            "responses": ["Он должен спасти наш народ.", "Я принесу его в родные края."],
+            "options": [
+                { "message": "Впечатляет.", "nextStep": "end" }
+            ]
+        },
+        "helpOfferReply": {
+            "responses": ["Спасибо, но я справлюсь сам.", "Пока нет необходимости."],
+            "options": [
+                { "message": "Понял, удачи.", "nextStep": "end" }
+            ]
+        },
+        "end": {
+            "responses": ["Прощай, путник.", "До встречи на дорогах."],
+            "options": []
+        }
+    }
+}

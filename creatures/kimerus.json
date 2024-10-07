@@ -1,0 +1,84 @@
+{
+    "name": "Кимерус",
+    "type": "hostile",
+    "description": "Кимерус - очень коварный и жестокий обитатель рубиновых гор. У него еть большие крылья позволяющие ему оченб высоко летать. Можно задобрить Яблоками",
+    "dialogues": {
+        "start": {
+            "options": [
+                { "message": "Хэй, ты кто!", "nextStep": "greetingReply" },
+                { "message": "Что за черт, ты?", "nextStep": "occupationReply" },
+                { "message": "(Дать ему 1 яблоко у вас(1))", "nextStep": "unexpectedReply" }
+            ]
+        },
+        "greetingReply": {
+            "responses": ["Я бы хотел у тебя спросить.", "Лучше ты ответь."],
+            "options": [
+                { "message": "Я просто мимо проходил.", "nextStep": "passReply" },
+                { "message": "Хотел поговорить.", "nextStep": "occupationReply" },
+                { "message": "Нет, ты скажи!", "nextStep": "newsReply" }
+            ]
+        },
+        "occupationReply": {
+            "responses": ["Он улыбнулся и не ответил..."],
+            "options": [
+                { "message": "...", "nextStep": "fight" },
+                { "message": "Понятно, удачи.", "nextStep": "fight" },
+                { "message": "(Дать ему 1 яблоко у вас(1))", "nextStep": "unexpectedReply" }
+            ]
+        },
+        "unexpectedReply": {
+            "responses": ["Мммм, яблочки!", "(Он схватил яблоко и начал его грызть)"],
+            "options": [
+                { "message": "Кто ты?", "nextStep": "friendlyReply" },
+                { "message": "...", "nextStep": "end" }
+            ]
+        },
+        "talkReply": {
+            "responses": ["Эййй, куда это ты?", "Куда, это мы пошли?"],
+            "options": [
+                { "message": "А тебе какая разница?", "nextStep": "fight" },
+                { "message": "(Уйти)", "nextStep": "newsReply" }
+            ]
+        },
+        "howLongReply": {
+            "responses": ["Слишком поздно.."],
+            "options": [
+                { "message": "...", "nextStep": "fight" }
+            ]
+        },
+        "newsReply": {
+            "responses": ["Я лучше покажу!"],
+            "options": [
+                { "message": "...", "nextStep": "fight" }
+            ]
+        },
+        "friendlyReply": {
+            "responses": ["Я кимерус, и кстати не мешай мне есть яблоко!", "Отстань! Дай мне поесть!"],
+            "options": [
+                { "message": "...", "nextStep": "end" },
+                { "message": "Кто ты такой, чтобы так со мной разговаривать!", "nextStep": "angryReply"}
+            ]
+        },
+        "angryReply": {
+            "responses": ["Я тебе сейчас покажу, кто я такой!", "Ха ха ха, ну смотри кто я!"],
+            "options": [
+                { "message": "...", "nextStep": "fight" }
+            ]
+        },
+        "passReply": {
+            "responses": ["Ладно, я не трону тебя, только дай мне яблоко."],
+            "options": [
+                { "message": "Еще чего!", "nextStep": "fight" },
+                { "message": "(Дать ему 1 яблоко у вас(1))", "nextStep": "end" }
+            ]
+        },
+        "fight": {
+            "responses": ["Ох зря ты это сказал. Он взмывает в воздух и летит прямо на тебя. Начинается бой!", "Он громко кричит и замахивается на тебя! Начинается бой!"],
+            "options": []
+        },
+        "end": {
+            "responses": ["(Он, cъел яблоко и улетел)"],
+            "options": []
+        }
+    }
+}
